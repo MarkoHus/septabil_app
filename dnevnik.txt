@@ -1,0 +1,33 @@
+19.10.2021.:
+-cijeli tim
+-pregled zadatka i podjela posla
+
+7.11.2021.:
+-cijeli tim
+-razrada arhitekture
+
+9.11.2021.:
+-cijeli tim
+-konacna razrada arhitekture
+
+16.11.2021.:
+-cijeli tim
+-raspodjela dokumentacije
+
+13.12.2021.:
+-cijeli tim
+-dogovor oko backend-a
+
+18.12.2021.:
+-cijeli tim
+-pregled i demonstriranje trenutnih funkcionalnosti aplikacija
+
+20.12.2021.:
+-cijeli tim
+-rad na backend-u i bazi podataka
+
+2.1.2022.:
+-cijeli tim
+-podijela posla na dokumentaciji
+
+

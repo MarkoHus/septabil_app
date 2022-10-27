@@ -1,0 +1,94 @@
+\chapter{Opis projektnog zadatka}
+		
+		\textbf{\textit{dio 1. revizije}}\\
+		
+	
+		
+		
+	
+		
+		
+		Cilj ovog projekta je razviti prikladnu strukturu i programsku podršku za stvaranje mobilne aplikacije "DigiFyl".
+		Aplikacija će biti dostupna i prikladna za korištenje svim računovodstvenim tvrtkama koje žele prijeći na novi i moderniji način skladištenja svojih dokumenata te im omogućiti brz i jednostavan prijelaz.
+		U današnjem dobu gdje je digitalizacija sve jači faktor u svim granama proizvodnje i osobnog života, sustavi koji se njome ne koriste su zastarjeli. Još jedna značajna pozitivna strana korištenja DigiFyl digitaliziranog sustava skladištenja dokumenta je što se smanjuje potreban fizički međuljudski kontakt, što uvelike olakšava rad s dokumentima u današnje vrijeme. Također je i dijeljenje i traženje određenih dokumenata jednostavnije i efikasnije nego rad s fizičkim dokumentima.
+		
+		Naše usluge se dijele na aplikaciju koju će svi korisnici unutar klijentske tvrtke koristiti na svojem mobitelu i pozadinsku strukturu koja će podržavati dio funkcionalnosti aplikacije i skladištiti te čuvati dokumente tvrtke. Cilj nam je učiniti potrebne promjene pri prijelazu na korištenje naših usluga vrlo jednostavnim za korisničku tvrtku, učiniti sam prijelaz brzim i efikasnim te napraviti aplikaciju jednostavnom i intuitivnom za korištenje. Glavne funkcionalnosti aplikacije su skeniranje tekstualnih dokumenata u fizičkom obliku pomoću kamere te kreiranje njegove digitalne kopije koju je moguće dijeliti s drugim korisnicima i skladištiti u sustavu. Također je unutar aplikacije implementiran i korisnički sustav koji podržava rad unutar tvrtke.
+		
+		
+		\medskip
+		\textbf{Pokazni primjer funkcionalnosti aplikacije, korisnici i tipovi dokumenata}
+		\medskip
+		
+		
+		 Pri prvom pokretanju aplikacije korisnika, korisniku se na izbor otvara mogućnost kreacije novog računa ili prijavljivanja na vlastiti račun. Pri kreaciji novog računa, korisnik bira i svoju ulogu na temelju koje mu aplikacija kasnije nudi različite funkcionalnosti i dodjeljuje prava. Za kreaciju novog računa potrebni su:
+				
+		\begin{packed_item}
+			
+			\item  korisničko ime
+			\item  lozinka
+			\item  ime i prezime
+			\item  broj mobitela
+			\item  email adresa
+			\item  uloga u tvrtki	
+			
+		\end{packed_item}
+	
+		Registracijom u sustav korisniku se dodjeljuju prava i funkcionalnosti izabrane uloge te korisnik šalje zahtjev za pristupanje zajednici određene tvrtke. Direktor tvrtke nakon kreacije računa kreira i tvrtku te on pregledava zahtjeve korisnika za pridruživanje tvrtki i odobrava ili odbija te iste zahtjeve. Također direktor može dodijeliti ta ista prava zaposlenicima koje odabere.
+		
+		\medskip
+		\textbf{Uloge i njihove pripadne funkcionalnosti i prava su:}
+		
+			\begin{packed_item}
+		\item\underbar{Zaposlenik}- su najbrojnija pozicija, njihova uloga je skeniranje dokumenata i slanje skeniranih dokumenata revizoru. Zaposlenik također može vidjeti povijest svojih skeniranja. 
+		
+		\item\underbar{Revizor}- ima iste funkcije i prava kao i korisnik, uz dodatna prava i funkcije. Dodatna funkcija je da nakon što revizor skenira dokument, aplikacija automatski određuje tip dokumenta i računovođu kojem se skenirani dokument šalje. Također revizor pregledava sve pristigle dokumente i šalje ih odgovarajućim računovođama.
+		
+		\item\underbar{Računovođa}- dobivene dokumente arhivira u bazu podataka. Također, računovođa
+		 ima opciju slanja dokumenta direktoru na potpis prije arhiviranja te arhiviranja nakon potpisa. 
+		
+		\item\underbar{Direktor}- uz funkcije i prava svih ostalih korisnika, može i vidjeti povijest svih dokumenta te povijest i
+		statistike svih zaposlenika, kreira tvrtku pri kreiranja računa, prihvaća ili odbija zahtjeve korisnika svojoj tvrtki te može mijenjati pozicije svoj zaposlenika i dodjeljivati im određena prava, kao pravo prihvaćanja zahtjeva tvrtki.
+		\end{packed_item}
+	
+	\medskip
+	\textbf{Tipovi dokumenata}
+	
+		\begin{packed_item}
+			
+			
+			\item\underbar{računi} Računi će unutar dokumenta na kraju teksta imati oznaku  računa koja je veliko slovo R te šest znamenaka. Računi osim oznake sadrže ime klijenta, artikle s cijenama i ukupnu cijenu
+			\item\underbar{ponude} ponude će unutar dokumenta na kraju teksta imati veliko slovo P i devet znamenaka. Ponude će osim oznake sadržavati artikle s cijenama i ukupnu cijenu
+			\item\underbar{interni dokumenti} Interni dokumenti će unutar dokumenta na kraju teksta imati „INT“ i četiri znamenke. Ostatak internog dokumenta je nestrukturirani tekst.
+			
+		\end{packed_item}
+	
+		\medskip
+		\textbf{Pregled elastičnosti infrastrukture aplikacije i poslovnog modela}
+			\\
+		Naša aplikacija i sustav pokriva osim predstavljene aplikacije, i pozadinski kod, i bazu podataka
+			unutar koje bi se čuvali svi spremljeni dokumenti. Budući da smo za našu serversku stranu odabrali servise Amazon Web Services-a, to nam daje mogućnost održati našu pozadinsku strukturu skalabilnom koja nam uvelike olakšava dio posla s predviđanjem potrebnog razmjera pozadinske strukture i omogućava lako i okretno prilagođavanje potrebama naših klijenata. Zato na samom početku, naš sustav ima male zahtjeve unutar Amazonovog Web Clouda te naše potrebe ne izlaze izvan dozvoljenih granica bez plaćanja AWS-ovih usluga što nam je sasvim dovoljno za testiranje našeg proizvoda od strane klijenata. Nakon što bi se određeni klijent odlučio za korištenje naših usluga i predstavio nam svoje potrebe, mi bi prikladno odredili potreban razmjer našeg pozadinskog sistema, naknadu koju bi plaćali AWS-u za traženo proširenje usluga, i uzimajući sve u obzir, predstavili klijentu cijenu naših usluga među koje ulazi i podrška korisnicima naših usluga. Predstavljen način izdavanja ponuda klijentima i prikladnog mijenjanja sustava naknadno je mnogo efikasniji i jednostavniji radi brzih i jednostavnih mogućnosti mijenjanja skale pozadinskog sustava koju AWS pruža. Nadalje, nakon prikladnog širenja sustava za jednog klijenta, dolazak i korištenje naših usluga novog klijenta nikako neće utjecati na prethodnog klijenta. Promjene i povećanja sustava imaju i više opcija te, uz prethodno navedena svojstva, mi jednostavno možemo odrediti prikladno rješenje, odrediti zahtjeve novog proširenog sustava unutar AWS-ovog web clouda. Znajući troškove korištenja AWS-ovih usluga, lako možemo predstaviti novom klijentu ponudu korištenja naših usluga koja nikako utječe na ostale klijente. Time korištenje naših usluga od strane klijenata je jednostavno, nikakve integracije sustava nisu potrebne jer se mi brinemo o samoj strukturi koja čuva i skladišti dokumente korisnika te je naš sustav prilagodljiv i okretan za sve potrebne promjene i nove zahtjeve.
+		
+		\medskip
+		\textbf{Pregled prilagodljivosti korisničkog sustava}
+			\\
+		Pri ponudi naših usluga novoj korisničkoj stranci, također nudimo i kreaciju posebno prilagođenog sustava korisnika dizajniranom isključivo za tu korisničku stranku. Uzimajući u obzir tipove dokumenata, različite pozicije pojedinih zaposlenika unutar tvrtke i njihovih ovlasti i funkcija, pomoću naših postojećih predložaka sustava korisnika i dokumenata zajedno s izradom i implementacijom svega novog potrebnog za specifični zahtjev, brzo i jednostavno kreiramo prilagođen sustav korisnika, dokumenata i funkcionalnosti. Cijena ove usluge ovisi o samim specifikacijama određenog zahtjeva.
+		
+
+
+		
+		\medskip
+		\textbf{Usporedba s konkurentnim proizvodima na tržištu}
+			\\
+		Na tržištu već postoje mnoge aplikacije slične našoj po tome što implementiraju optičko prepoznavanje znakova i omogućuju skeniranje tekstualnih zapisa sa slike te prebacivanje skeniranog teksta u druge formate. Primjeri takvih aplikacija su Text Scanner i Text Fairy dostupne na Google Play-u. Isto tako, mnogi pružatelji usluga skladištenja i rada s digitaliziranim dokumentima su već duže vremena dostupni na tržištu, kao što su ClearDATA i FileCloud, te postoje i mnogi koji uz digitalno skladištenje dokumenta pružaju i usluge skeniranja dokumenata kao što su Apyxx Technologies i GRM Document Management.
+			
+		Ono po čemu se naša aplikacija razlikuje od navedenih je što osim što sadrži potpunu pozadinsku potporu za skladištenje i rad sa skeniranim tekstualnim dokumentima zajedno s odgovarajućim korisničkim sistemom i održavanjem cijelog sistema dokumenata, također nudi elastičnost i prilagodljivost svakoj zasebnoj korisničkoj stranci u obliku prilagođavanja korisničkog sistema i skale pozadinskog sustava. Korištenje naše aplikacije je jednostavno i intuitivno te dolazi uz kontinuiranu korisničku podršku. Time su naše usluga najbolji izbor za izradu digitalnih kopija dokumenata, održavanje njihovog sistema skladištenja i rad među korisnicima sa digitaliziranim dokumentima za odgovarajuće tvrtke kojima su potrebne navedene usluge.
+		
+		
+		
+		
+		
+		\eject
+		
+		
+		
+	

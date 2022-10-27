@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.septabilapp">
+
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SeptabilApp">
+        <activity android:name=".universalActivities.DocumentPreview"></activity>
+        <activity android:name=".direktorUniqueActivities.DokumentiPotrebanPotpis" />
+        <activity android:name=".racunovodaUniqueActivities.ZahtjeviZaRacunovodu" />
+
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="ocr" />
+
+        <activity
+            android:name=".direktorUniqueActivities.PovijestIStatistikaDokumenata"
+            android:exported="false" />
+        <activity
+            android:name=".cameraActivities.SlikaniDokument"
+            android:exported="false" />
+        <activity
+            android:name=".direktorUniqueActivities.PovijestIStatistikaRadnika"
+            android:exported="false" />
+        <activity
+            android:name=".universalActivities.INVALIDROLEActivity"
+            android:exported="false" />
+        <activity
+            android:name=".revizorUniqueActivities.ZahtjeviZaRevizora"
+            android:exported="false" />
+        <activity
+            android:name=".universalActivities.PovijestSkeniranja"
+            android:exported="false" />
+        <activity
+            android:name=".cameraActivities.SkeniraniDokument"
+            android:exported="false" />
+        <activity
+            android:name=".cameraActivities.SlikajDokument"
+            android:exported="false" />
+        <activity
+            android:name=".direktorUniqueActivities.PovijestIStatistikaDirActivity"
+            android:exported="false" />
+        <activity
+            android:name=".direktorUniqueActivities.DirektorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".racunovodaUniqueActivities.RacunovodaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".revizorUniqueActivities.RevizorActivity"
+            android:exported="false" />
+        <activity android:name=".zaposlenikUniqueActivities.ZaposlenikActivity" />
+        <activity android:name=".universalActivities.SignUpActivity" />
+        <activity android:name=".universalActivities.AdminActivity" />
+        <activity android:name=".universalActivities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

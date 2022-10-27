@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">SeptabilApp</string>
+
+    <string-array name="role_menu">
+        <item>zaposlenik</item>
+        <item>revizor</item>
+        <item>direktor</item>
+        <item>racunovodaR</item>
+        <item>racunovodaI</item>
+        <item>racunovodaP</item>
+    </string-array>
+
+    <string name="col1">ID</string>
+    <string name="col2">Vrijeme</string>
+    <string name="col3">Tip</string>
+    <string name="col4">Scan</string>
+    <string name="col5">Radnik</string>
+
+
+    <!-- Examples -->
+    <string name="ID1">123456</string>
+    <string name="Vrijeme1">12.3.2022 15:20</string>
+    <string name="Tip1">UNUTARNJI DOKUMENT</string>
+    <string name="Scan1">ISPRAVAN</string>
+
+    <string name="ID2">223366</string>
+    <string name="Vrijeme2">2.3.2022 15:40</string>
+    <string name="Tip2">RACUN</string>
+    <string name="Scan2">NEISPRAVAN</string>
+
+
+</resources>
